@@ -41,92 +41,92 @@ const ARTWORKS: Artwork[] = [
   {
     id: "a01", src: imgS2MatTranDanChu,
     year: "1/5/1938",
-    caption: "Mít tinh 1/5/1938 tại khu Đấu Xảo — Hà Nội",
+    caption: "Cuộc mít tinh khổng lồ của 2.5 vạn người tại khu Đấu Xảo - Hà Nội",
     description: "Cuộc mít tinh kỷ niệm ngày Quốc tế Lao động 1/5/1938 tại khu Đấu Xảo (Hà Nội) là đỉnh cao chói lọi của phong trào Mặt trận Dân chủ Đông Dương. Đây là cuộc mít tinh công khai hợp pháp khổng lồ quy tụ hơn 2.5 vạn quần chúng từ các ngành nghề biểu dương lực lượng đấu tranh đòi tự do lập hội, cải thiện đời sống nhân dân lao động, chống chiến tranh phát xít và ủng hộ hòa bình thế giới. Sự kiện được tổ chức vô cùng chặt chẽ, kỷ luật dưới sự lãnh đạo trực tiếp của Đảng Cộng sản Đông Dương. Hàng vạn người xếp hàng ngay ngắn hô vang khẩu hiệu đòi cải cách xã hội, chống chiến tranh phát xít và ủng hộ Mặt trận Nhân dân Pháp, chứng minh sức mạnh đoàn kết giai cấp mạnh mẽ.",
   },
   {
     id: "a02", src: imgS1BoiCanhQuocTe,
     year: "7/1935",
-    caption: "Đại hội VII Quốc tế Cộng sản tại Mát-xcơ-va",
+    caption: "Đại hội VII Quốc tế Cộng sản, tháng 7/1935",
     description: "Đại hội lần thứ VII của Quốc tế Cộng sản họp tại Mát-xcơ-va vào tháng 7/1935 là một dấu mốc lịch sử đối với cách mạng thế giới và Việt Nam. Trong bối cảnh chủ nghĩa phát xít đang trỗi dậy mạnh mẽ đe dọa hòa bình nhân loại, Đại hội đã xác định kẻ thù nguy hiểm trước mắt là chủ nghĩa phát xít. Đại hội chủ trương thành lập Mặt trận Nhân dân rộng rãi đấu tranh giành tự do, hòa bình và dân chủ. Quyết sách này là cơ sở lý luận quan trọng giúp Đảng Cộng sản Đông Dương chuyển hướng chiến lược, thành lập Mặt trận Dân chủ chống thực dân phản động Pháp.",
   },
   {
     id: "a03", src: imgS2DaiHoi1,
     year: "3/1935",
-    caption: "Đại hội đại biểu lần thứ I của Đảng tại Ma Cao",
+    caption: "Đại biểu tham dự Đại hội Đảng lần thứ I tại Ma Cao",
     description: "Đại hội đại biểu lần thứ I của Đảng họp tại Ma Cao (Trung Quốc) vào tháng 3/1935 đánh dấu bước khôi phục tổ chức vô cùng quan trọng. Sau giai đoạn bị thực dân Pháp khủng bố trắng tàn khốc sau cao trào Xô viết Nghệ Tĩnh (1930-1931), hệ thống Đảng bị tổn thất nặng nề. Đại hội họp để củng cố lại hệ thống tổ chức từ Trung ương đến cơ sở, thống nhất đường lối cách mạng và thông qua các nghị quyết quan trọng về vận động công nhân, nông dân. Đại hội tạo tiền đề vững chắc đưa Đảng bước vào cao trào đấu tranh mới.",
   },
   {
     id: "a04", src: imgS1PhatXit,
     year: "1933–1939",
-    caption: "Chủ nghĩa phát xít — Mối đe dọa toàn cầu",
+    caption: "Phe Trục phát xít, nguy cơ chiến tranh thế giới",
     description: "Sự trỗi dậy của chủ nghĩa phát xít tại Đức, Ý và Nhật Bản trong những năm 1930 đã đẩy nhân loại vào nguy cơ một cuộc chiến tranh tàn khốc mới. Các thế lực phát xít điên cuồng xóa bỏ các quyền tự do dân chủ trong nước, tăng cường chạy đua vũ trang và chuẩn bị phân chia lại bản đồ thế giới. Nhận thấy hiểm họa sống còn này, các lực lượng dân chủ trên toàn thế giới đã liên kết chặt chẽ. Tại Đông Dương, Đảng liên tục tuyên truyền giúp quần chúng nhận rõ bộ mặt tàn bạo của phát xít Nhật, chuẩn bị lực lượng chống lại họa xâm lăng.",
   },
   {
     id: "a05", src: imgS1DoiSongNhanDan,
     year: "1929–1933",
-    caption: "Đời sống nhân dân dưới ách áp bức thực dân phong kiến",
+    caption: "Nông dân, phu cao su trong thời kỳ khủng hoảng kinh tế 1929-1933",
     description: "Bức tranh phản ánh đời sống bần cùng hóa của nhân dân Đông Dương dưới ách bóc lột của thực dân Pháp và phong kiến tay sai. Giai cấp nông dân bị cướp đoạt ruộng đất, chịu cảnh thuế khóa đè nặng, sưu cao thuế nặng và chế độ lao dịch khắc nghiệt. Công nhân trong các hầm mỏ, đồn điền cao su làm việc 14-16 tiếng mỗi ngày dưới làn roi vọt và đồng lượng rẻ mạt. Cuộc khủng hoảng kinh tế toàn cầu càng đẩy người lao động vào cảnh đói nghèo, dịch bệnh, tích tụ niềm phẫn uất bùng nổ thành các phong trào đấu tranh cách mạng.",
   },
   {
     id: "a06", src: imgS3MatTranPhap,
     year: "1936",
-    caption: "Chính phủ Mặt trận Nhân dân Pháp lên nắm quyền",
+    caption: "Léon Blum và Chính phủ Mặt trận Nhân dân Pháp, 1936",
     description: "Năm 1936, thắng lợi của Mặt trận Nhân dân Pháp do Đảng Cộng sản và Đảng Xã hội Pháp nòng cốt đã đưa chính phủ cánh tả lên nắm quyền ở Pháp. Chính phủ mới đã ban hành nhiều cải cách tự do tiến bộ cho các thuộc địa, bao gồm Đông Dương như đại xá tù chính trị, nới lỏng chế độ kiểm duyệt báo chí, công nhận các hội cứu tế. Sự thay đổi chính trị này đã mở ra một khoảng không gian pháp lý vô giá giúp Đảng Cộng sản Đông Dương đưa phong trào cách mạng ra hoạt động công khai và nửa hợp pháp.",
   },
   {
     id: "a07", src: imgS3MitTinh,
     year: "1900–1943",
-    caption: "Nhà báo — nhà yêu nước lỗi lạc Nguyễn An Ninh",
+    caption: "Nhà yêu nước Nguyễn An Ninh (1900 - 1943)",
     description: "Nguyễn An Ninh (1900-1943) là một nhà báo vĩ đại, nhà yêu nước lỗi lạc và là linh hồn của phong trào Đông Dương Đại hội tại Nam Kỳ. Với tri thức uyên bác và ngòi bút đanh thép, ông sáng lập tờ báo 'La Cloche Fêlée' cổ vũ tinh thần tự do. Nguyễn An Ninh đã đi khắp các tỉnh Nam Kỳ diễn thuyết trước hàng vạn quần chúng, thức tỉnh lòng yêu nước và ý thức chính trị của người dân lao động. Ông bị thực dân Pháp bắt giam nhiều lần và cuối cùng hy sinh anh dũng tại nhà tù Côn Đảo, để lại tấm gương sáng ngời.",
   },
   {
     id: "a08", src: imgS3BaoChi,
     year: "1936–1939",
-    caption: "Mặt trận báo chí cách mạng công khai",
+    caption: "Báo Tin tức, Dân chúng, hoặc các ấn phẩm công khai",
     description: "Thời kỳ 1936-1939 chứng kiến sự bùng nổ mạnh mẽ của mặt trận báo chí cách mạng hoạt động công khai. Đảng đã xuất bản hàng chục tờ báo chữ Quốc ngữ và tiếng Pháp như Dân Chúng, Tin Tức, Lao Động... Các tờ báo này không chỉ đưa tin thời sự mà còn giáo dục lý luận cách mạng, phản ánh tiếng nói đau khổ của người lao động, vạch trần các chính sách bóc lột của thực dân. Báo chí trở thành người tổ chức tập thể, kết nối quần chúng đấu tranh tạo nên dư luận xã hội mạnh mẽ đòi tự do.",
   },
   {
     id: "a09", src: imgS4PhongTraoDanChu,
     year: "1936–1937",
-    caption: "Phong trào Đông Dương Đại hội — Thu thập Dân nguyện",
+    caption: "Quần chúng đấu tranh 1936 - 1939",
     description: "Phong trào Đông Dương Đại hội phát động năm 1936 là một chiến dịch vận động chính trị rộng khắp. Hàng vạn bản 'Dân nguyện' chứa đựng khát vọng tự do, cơm áo đã được thu thập gửi đến phái đoàn điều tra của Chính phủ Pháp. Khắp nơi từ nhà máy, hầm mỏ đến thôn xóm đều thành lập các Ủy ban hành động để thảo luận và ký tên vào các yêu sách. Phong trào đã huy động hàng triệu người tham gia, biến ý chí của Đảng thành nguyện vọng thiết tha của quần chúng nhân dân trên khắp ba miền đất nước.",
   },
   {
     id: "a10", src: imgS2HoiNghiThuongHai,
     year: "7/1936",
-    caption: "Hội nghị BCH Trung ương tại Thượng Hải",
+    caption: "Tổng Bí thư Lê Hồng Phong chủ trì hội nghị",
     description: "Hội nghị Ban Chấp hành Trung ương Đảng họp tại Thượng Hải (Trung Quốc) vào tháng 7/1936 dưới sự chủ trì của đồng chí Lê Hồng Phong đã quyết định chuyển hướng chỉ đạo chiến lược cách mạng Đông Dương. Nhận định tình hình quốc tế và trong nước thay đổi, Hội nghị chủ trương tạm gác khẩu hiệu độc lập dân tộc và tịch thu ruộng đất dân cày, chuyển sang thành lập Mặt trận Nhân dân phản đế (Mặt trận Dân chủ) đấu tranh đòi tự do, dân sinh, dân chủ. Quyết sách này giúp Đảng tập hợp lực lượng rộng lớn.",
   },
   {
     id: "a11", src: imgS3NghiTruong,
     year: "1938",
     author: "Trường Chinh & Võ Nguyên Giáp",
-    caption: "Tác phẩm 'Vấn đề dân cày' (1938)",
+    caption: "Sách Vấn đề dân cày, 1938",
     description: "Cuốn sách lý luận kinh điển 'Vấn đề dân cày' do hai đồng chí Trường Chinh và Võ Nguyên Giáp biên soạn dưới bút danh Qua Ninh và Vân Đình xuất bản năm 1938. Tác phẩm phân tích sâu sắc thực trạng bóc lột địa tô, thuế khóa tàn bạo của chế độ thực dân phong kiến đối với nông dân Việt Nam. Cuốn sách khẳng định nông dân là động lực chủ yếu của cách mạng, chỉ ra con đường giải phóng nông dân gắn liền với liên minh công nông chặt chẽ dưới sự lãnh đạo của Đảng Cộng sản Đông Dương.",
   },
   {
     id: "a12", src: imgS4ChienTranh,
     year: "9/1939",
-    caption: "Chiến tranh thế giới thứ hai — Kết thúc thời kỳ Dân chủ",
+    caption: "Đức tấn công Ba Lan 1939",
     description: "Tháng 9/1939, Chiến tranh thế giới thứ hai chính thức bùng nổ. Thực dân Pháp thực hiện chính sách quân sự hóa thời chiến ở Đông Dương, thẳng tay đàn áp phong trào dân chủ cách mạng, đóng cửa các tờ báo cách mạng và bắt giam hàng loạt cán bộ Đảng viên. Thời kỳ hoạt động công khai nửa hợp pháp kết thúc. Đảng đã nhanh chóng chuyển hướng chỉ đạo chiến lược, đưa lực lượng rút vào hoạt động bí mật, xây dựng căn cứ địa cách mạng và chuẩn bị vũ trang khởi nghĩa giành độc lập.",
   },
   {
     id: "a13", src: imgS4RenLuyenCanbo,
     year: "1936–1939",
-    caption: "Công tác huấn luyện, rèn luyện cán bộ cách mạng",
+    caption: "Đội ngũ cán bộ và cơ quan báo chí công khai của Mặt trận Dân chủ Đông Dương (1936 - 1939)",
     description: "Trong thời kỳ Mặt trận Dân chủ Đông Dương, công tác huấn luyện cán bộ cách mạng được Đảng đặc biệt coi trọng. Hàng loạt lớp huấn luyện lý luận chính trị ngắn ngày được mở bí mật và bán công khai nhằm bồi dưỡng chủ nghĩa Mác - Lênin, phương pháp vận động quần chúng cho các đảng viên. Nhiều cán bộ sau này trở thành lãnh đạo xuất sắc của Cách mạng Tháng Tám đã được rèn luyện thử thách chính trị trong lửa đỏ của phong trào dân chủ công khai này.",
   },
   {
     id: "a14", src: imgS1PhongTraoCachMang,
     year: "1930–1935",
-    caption: "Phong trào cách mạng Việt Nam trước giai đoạn Dân chủ",
+    caption: "Phong trào vận động dân chủ 1936 – 1939 tại Huế",
     description: "Phong trào cách mạng Việt Nam giai đoạn 1930-1935 trải qua những bước thăng trầm oanh liệt. Từ đỉnh cao cao trào Xô viết Nghệ Tĩnh (1930-1931) bị thực dân Pháp khủng bố trắng tàn bạo, Đảng bước vào thời kỳ khôi phục tổ chức đầy gian lao. Dù bị giam cầm trong các nhà lao Sơn La, Côn Đảo, các chiến sĩ cách mạng vẫn giữ vững khí tiết đấu tranh, biến nhà tù thành trường học cách mạng, chuẩn bị tinh thần và lực lượng đón đầu cao trào dân chủ 1936-1939.",
   },
   {
     id: "a15", src: imgCover1936,
     year: "1936",
-    caption: "Dấu mốc 1936 — Mặt trận Dân chủ Đông Dương ra đời",
+    caption: "Ảnh bìa tư liệu lịch sử phong trào cách mạng năm 1936",
     description: "Năm 1936 mở ra thời kỳ hoạt động công khai rực rỡ nhất của Đảng. Nhờ sự nhạy bén chính trị của Trung ương, Đảng đã chuyển hướng kịp thời từ đấu tranh bí mật sang kết hợp linh hoạt đấu tranh công khai, hợp pháp và nửa hợp pháp. Sự ra đời của Mặt trận Dân chủ Đông Dương đã lôi cuốn hàng triệu người dân tham gia đấu tranh chính trị trực diện đòi cải thiện đời sống, đưa uy tín và ảnh hưởng của Đảng lan rộng khắp Đông Dương.",
   },
 ];
@@ -365,84 +365,84 @@ export function Museum3DPage({ onBack }: Museum3DPageProps) {
     // Detailed historical data list for the 12 outside dome wall slots
     const outsideExhibitsData = [
       {
-        title: "Đông Dương Đại hội sục sôi (1936)",
+        title: "Quần chúng đấu tranh 1936 - 1939 (Đông Dương Đại hội)",
         part: "Phần II · Trưng bày vòm ngoài",
         url: imgS4PhongTraoDanChu,
         year: "1936",
         details: "Phong trào Đông Dương Đại hội bùng nổ mạnh mẽ trong suốt năm 1936, mở đầu cho cao trào dân chủ lớn chưa từng có. Dưới sự lãnh đạo sáng suốt của Đảng Cộng sản Đông Dương, hàng nghìn Ủy ban hành động đã được thành lập công khai tại các nhà máy, hầm mỏ, thôn xóm để thu thập nguyện vọng của quần chúng nhân dân. Các bản 'Dân nguyện' tập trung đòi tự do lập hội, tự do báo chí, tự do hội họp, cải thiện đời sống công nhân và chia lại ruộng đất cho dân cày nghèo. Phong trào đã thức tỉnh tinh thần chính trị của đông đảo quần chúng, tạo tiền đề xây dựng lực lượng cách mạng to lớn sau này."
       },
       {
-        title: "Mặt trận Dân chủ Đông Dương ra đời",
+        title: "Ảnh bìa tư liệu Mặt trận Dân chủ Đông Dương (1936)",
         part: "Phần II · Trưng bày vòm ngoài",
         url: imgCover1936,
         year: "1936",
         details: "Trước sự xuất hiện của chủ nghĩa phát xít nguy hiểm và sự chỉ đạo của Quốc tế Cộng sản, Đảng Cộng sản Đông Dương đã nhanh chóng họp hội nghị Ban Chấp hành Trung ương (7/1936) quyết định tạm thời gác khẩu hiệu tịch thu ruộng đất của địa chủ và đánh đổ đế quốc Pháp. Đảng chủ trương thành lập Mặt trận Nhân dân phản đế (sau đổi thành Mặt trận Dân chủ Đông Dương) nhằm đoàn kết rộng rãi mọi giai cấp, tầng lớp xã hội, đảng phái và ngoại kiều tiến bộ để cùng đấu tranh đòi các quyền dân sinh, dân chủ, tự do, hòa bình."
       },
       {
-        title: "Sự trỗi dậy của báo chí cách mạng tiếng Pháp",
+        title: "Báo chí tiếng Pháp đấu tranh công khai (1936-1939)",
         part: "Phần II · Trưng bày vòm ngoài",
         url: imgS3BaoChi,
         year: "1936–1939",
         details: "Trong những năm tháng đấu tranh công khai nửa hợp pháp, Đảng đặc biệt chú trọng xuất bản các tờ báo bằng tiếng Pháp như Le Travail (Lao động), Rassemblement (Tập hợp), Notre Voix (Tiếng nói của chúng ta)... Nhắm trực tiếp vào chính giới Pháp và tầng lớp trí thức tiến bộ tại Đông Dương. Các tờ báo này đã vạch trần các chính sách bóc lột, tù đày của chính quyền thực dân, tuyên truyền sâu rộng chủ nghĩa Mác - Lênin và định hướng đấu tranh cho quần chúng nhân dân một cách sắc bén."
       },
       {
-        title: "Hệ thống báo chí cách mạng chữ Quốc ngữ",
+        title: "Báo chí chữ Quốc ngữ đấu tranh công khai (1936-1939)",
         part: "Phần II · Trưng bày vòm ngoài",
         url: imgS3BaoChi,
         year: "1936–1939",
         details: "Song hành với báo tiếng Pháp, hệ thống báo chí chữ Quốc ngữ của Đảng như Dân Chúng, Tin Tức, Đời Mới, Lao Động... phát triển rực rỡ và có sức lan tỏa vô cùng mạnh mẽ. Tờ 'Dân Chúng' - cơ quan trung ương của Đảng - xuất bản công khai tại Sài Gòn có số lượng phát hành lên tới hàng vạn bản mỗi kỳ. Báo chí cách mạng đã trở thành công cụ tổ chức, giáo dục chính trị đắc lực nhất, giúp kết nối hàng triệu trái tim yêu nước từ nông thôn đến thành thị vào một khối thống nhất đấu tranh đòi quyền sống."
       },
       {
-        title: "Bãi công vang dội của công nhân Hòn Gai",
+        title: "Phong trào vận động dân chủ 1936 – 1939 tại Huế",
         part: "Phần II · Trưng bày vòm ngoài",
         url: imgS1PhongTraoCachMang,
         year: "11/1936",
         details: "Cuộc tổng bãi công lịch sử của hơn 2 vạn thợ mỏ than Hòn Gai - Cẩm Phả diễn ra vào tháng 11/1936 dưới sự lãnh đạo chặt chẽ của các chi bộ Đảng địa phương. Công nhân đồng loạt ngừng việc đòi tăng lương, giảm giờ làm, cải thiện điều kiện lao động tồi tệ dưới hầm mỏ và chống đánh đập. Mặc dù bị thực dân Pháp đe dọa, khủng bố và bao vây lương thực, công nhân vẫn đoàn kết kiên cường chia nhau từng bát cơm, ngọn rau. Cuộc đấu tranh anh dũng kéo dài nhiều tuần lễ cuối cùng đã buộc chủ mỏ phải nhượng bộ hoàn toàn, tạo nên tiếng vang lớn cho phong trào công nhân Đông Dương."
       },
       {
-        title: "Phong trào đấu tranh kiên cường của nông dân",
+        title: "Nông dân, phu cao su trong thời kỳ khủng hoảng kinh tế 1929-1933",
         part: "Phần II · Trưng bày vòm ngoài",
         url: imgS1DoiSongNhanDan,
         year: "1936–1939",
         details: "Khắp các vùng nông thôn từ Bắc Kỳ, Trung Kỳ đến Nam Kỳ, phong trào đấu tranh của nông dân diễn ra quyết liệt dưới nhiều hình thức. Hàng vạn nông dân đã rầm rộ kéo lên huyện đường, phủ đường đấu tranh đòi xóa bỏ sưu thuế vô lý, chia lại ruộng công công bằng, chống nạn cướp ruộng đất của địa chủ và đòi cứu trợ thiên tai. Sự liên minh chặt chẽ giữa phong trào đấu tranh của giai cấp công nhân ở thành thị và giai cấp nông dân ở nông thôn đã tạo nên sức mạnh vô địch, làm lung lay tận gốc bộ máy cai trị của chính quyền phong kiến tay sai thực dân Pháp."
       },
       {
-        title: "Đấu tranh nghị trường — Mặt trận mới mẻ",
+        title: "Sách lý luận 'Vấn đề dân cày' (1938) — Trọng tâm đấu tranh dư luận",
         part: "Phần II · Trưng bày vòm ngoài",
         url: imgS3NghiTruong,
         year: "1937–1938",
         details: "Lần đầu tiên trong lịch sử, Đảng Cộng sản Đông Dương chủ trương sử dụng hình thức đấu tranh nghị trường. Đảng đưa các đảng viên và người của Mặt trận Dân chủ ra ứng cử vào các cơ quan đại diện tư sản của thực dân Pháp như Viện Dân biểu Bắc Kỳ và Trung Kỳ. Với sự ủng hộ mạnh mẽ của quần chúng, nhiều ứng viên của Mặt trận đã trúng cử với số phiếu áp đảo. Tại nghị trường, các đại biểu cách mạng đã dũng cảm vạch trần các thủ đoạn sưu thuế đè nén nhân dân, đòi quyền tự do dân chủ và biến nghị trường thành diễn đàn tuyên truyền cách mạng công khai hiệu quả."
       },
       {
-        title: "Phong trào truyền bá chữ Quốc ngữ",
+        title: "Đội ngũ cán bộ và phong trào truyền bá chữ Quốc ngữ (1938)",
         part: "Phần II · Trưng bày vòm ngoài",
         url: imgS4RenLuyenCanbo,
         year: "1938",
         details: "Để nâng cao dân trí và khơi dậy tinh thần yêu nước, Đảng đã lãnh đạo thành lập 'Hội truyền bá chữ Quốc ngữ' hoạt động hợp pháp. Hàng loạt lớp học ban đêm được mở ra hoàn toàn miễn phí tại các đình chùa, nhà kho, lớp học tư cho công nhân, người lao động nghèo và nông dân mù chữ. Phong trào đã nhanh chóng xóa mù chữ cho hàng vạn người nghèo khổ, đồng thời lồng ghép giáo dục lòng tự tôn dân tộc, ý thức chính trị sâu sắc, chuẩn bị đội ngũ quần chúng có văn hóa sẵn sàng cống hiến cho sự nghiệp giải phóng đất nước."
       },
       {
-        title: "Ngày biểu dương lực lượng 1/5/1938 lịch sử",
+        title: "Cuộc mít tinh khổng lồ của 2.5 vạn người tại khu Đấu Xảo - Hà Nội",
         part: "Phần II · Trưng bày vòm ngoài",
         url: imgS2MatTranDanChu,
         year: "1/5/1938",
         details: "Ngày 1/5/1938 ghi dấu ấn chói lọi với cuộc mít tinh biểu dương lực lượng khổng lồ tại khu Đấu Xảo (Hà Nội). Hơn 2.5 vạn quần chúng gồm công nhân, nông dân, trí thức và dân nghèo thành thị đã tập hợp chỉnh tề dưới những lá cờ đỏ búa liềm và băng rôn đỏ rực. Quần chúng đồng thanh hô vang các khẩu hiệu đòi tự do lập hội, cải thiện đời sống người lao động, chống chiến tranh phát xít và ủng hộ hòa bình thế giới. Đây là cuộc biểu dương lực lượng lớn nhất, có tổ chức chặt chẽ nhất của nhân dân ta trong thời kỳ Dân chủ Đông Dương."
       },
       {
-        title: "Tác phẩm lý luận 'Vấn đề dân cày' (1938)",
+        title: "Sách lý luận 'Vấn đề dân cày' xuất bản năm 1938",
         part: "Phần II · Trưng bày vòm ngoài",
         url: imgS3NghiTruong,
         year: "1938",
         details: "Tác phẩm lý luận kinh điển 'Vấn đề dân cày' do hai đồng chí Trường Chinh và Võ Nguyên Giáp biên soạn dưới bút danh Qua Ninh và Vân Đình xuất bản năm 1938. Tác phẩm phân tích một cách toàn diện, sâu sắc hiện trạng bóc lột ruộng đất tàn bạo của chế độ thực dân phong kiến đối với nông dân Đông Dương. Tác phẩm chỉ rõ nông dân là động lực chủ yếu của cách mạng, muốn giải phóng dân tộc phải giải phóng giai cấp nông dân khỏi xiềng xích nô dịch, định hướng chiến lược liên minh công nông vững chắc cho cách mạng nước nhà."
       },
       {
-        title: "Đảng cảnh báo mối đe dọa chủ nghĩa phát xít",
+        title: "Phe Trục phát xít, nguy cơ chiến tranh thế giới",
         part: "Phần II · Trưng bày vòm ngoài",
         url: imgS1PhatXit,
         year: "1938–1939",
         details: "Nhận thức rõ nguy cơ Chiến tranh thế giới thứ hai sắp bùng nổ, Đảng Cộng sản Đông Dương liên tục phát hành các văn kiện và bài báo cảnh báo nhân dân về mối đe dọa cực kỳ nguy hiểm của chủ nghĩa phát xít Đức, Ý, Nhật. Đảng kêu gọi quần chúng nhân dân cảnh giác trước âm mưu bắt lính, trưng thu tài sản phục vụ chiến tranh của thực dân Pháp, đồng thời định hướng nhân dân đoàn kết trong Mặt trận Dân chủ để bảo vệ hòa bình, dân chủ và chuẩn bị đón thời cơ cách mạng lớn đang cận kề."
       },
       {
-        title: "Chuyển hướng hoạt động rút vào bí mật (1939)",
+        title: "Đức tấn công Ba Lan 1939 (Kết thúc phong trào dân chủ)",
         part: "Phần II · Trưng bày vòm ngoài",
         url: imgS4ChienTranh,
         year: "9/1939",
