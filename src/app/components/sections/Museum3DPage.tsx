@@ -331,12 +331,12 @@ export function Museum3DPage({ onBack }: Museum3DPageProps) {
         author: "Phim tư liệu lịch sử"
       },
       {
-        title: "Phim tư liệu: Cuộc đại mít tinh lịch sử 1/5/1938 tại Đấu Xảo",
+        title: "Phim tư liệu: Cao trào cách mạng Dân chủ Đông Dương (1936 - 1939)",
         part: "Phần I · Trưng bày phía trong",
         type: "video" as const,
         url: "/assets/BaoTang3D/video/lv_0_20260820195008.mp4",
         details: "1. Bối cảnh lịch sử:\n✦ Bối cảnh quốc tế: Lực lượng cánh tả ở Pháp (Đảng Cộng sản, Đảng Xã hội...) giành thắng lợi trong bầu cử Quốc hội, thành lập Chính phủ Mặt trận Nhân dân. Chính phủ tiến bộ này chủ trương nới rộng quyền tự do dân chủ cho các nước thuộc địa, trong đó có Đông Dương và Việt Nam.\n✦ Bối cảnh trong nước: Sau các đợt bắt bớ và khủng bố trắng tàn bạo của thực dân Pháp, tình hình cách mạng gặp muôn vàn khó khăn, số lượng đảng viên bị suy giảm nghiêm trọng.\n\n2. Các hoạt động đấu tranh tiêu biểu:\nTận dụng thời cơ chính sách cai trị nới lỏng, Đảng Cộng sản Đông Dương đã lãnh đạo phát động phong trào đấu tranh dân chủ sục sôi:\n✦ Vận động quần chúng tham gia các cuộc mít tinh, biểu tình công khai đòi dân sinh, dân chủ.\n✦ Xuất bản hệ thống báo chí cách mạng rộng khắp, đưa đại diện của Đảng tham gia ứng cử vào các hội đồng dân biểu và mở rộng đấu tranh trên mặt trận văn học nghệ thuật.\n✦ Đặc biệt, khi Chính phủ Pháp cử phái đoàn Godart sang Đông Dương điều tra, Đảng đã phát động phong trào thu thập và đưa bản 'Dân nguyện' trên phạm vi cả nước (từ Nam Kỳ lên tận Cao Bằng) để tập hợp lực lượng quần chúng làm quen với đấu tranh chính trị đòi quyền lợi hợp pháp.\n\n3. Kết quả và Ý nghĩa lịch sử:\n✦ Buộc thực dân Pháp phải nhượng bộ một số quyền lợi cụ thể trước mắt về dân sinh, dân chủ cho nhân dân lao động.\n✦ Giúp quần chúng nhân dân được giác ngộ lý luận chính trị sâu sắc, kết nối chặt chẽ trong Mặt trận Dân tộc thống nhất.\n✦ Đảng Cộng sản Đông Dương tích lũy được nhiều bài học kinh nghiệm quý báu về xây dựng mặt trận, tổ chức đấu tranh công khai hợp pháp và rèn luyện đội ngũ cán bộ cách mạng.\n✦ Đây là cuộc tập dượt vĩ đại, chuẩn bị trực tiếp cho thắng lợi của Tổng khởi nghĩa tháng Tám năm 1945.",
-        year: "1/5/1938",
+        year: "1936 - 1939",
         author: "Phim tư liệu lịch sử"
       }
     ];
