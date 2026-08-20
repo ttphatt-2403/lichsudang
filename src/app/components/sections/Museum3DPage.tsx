@@ -153,6 +153,7 @@ export function Museum3DPage({ onBack }: Museum3DPageProps) {
   const [progress, setProgress] = useState(0);
   const [error, setError] = useState<string | null>(null);
   const [showHelp, setShowHelp] = useState(true);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   // Proximity and Focus state
   const [nearExhibit, setNearExhibit] = useState<Exhibit | null>(null);
@@ -708,6 +709,7 @@ export function Museum3DPage({ onBack }: Museum3DPageProps) {
 
     // Resize Handler
     const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
       if (!mountRef.current) return;
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
@@ -1028,15 +1030,15 @@ export function Museum3DPage({ onBack }: Museum3DPageProps) {
           <div
             style={{
               display: "flex",
-              flexDirection: "row",
-              flexWrap: "wrap",
+              flexDirection: isMobile ? "column" : "row",
+              flexWrap: "nowrap",
               width: "100%",
               maxWidth: 920,
               maxHeight: "85vh",
               background: "linear-gradient(135deg, #faf6ed 0%, #f0e3c8 100%)",
               border: `3.5px solid ${C.accent}`,
               boxShadow: "0 25px 60px rgba(0,0,0,0.85)",
-              overflowY: "auto",
+              overflow: "hidden",
               position: "relative",
             }}
           >
@@ -1063,16 +1065,18 @@ export function Museum3DPage({ onBack }: Museum3DPageProps) {
               <X size={20} />
             </button>
 
-            {/* Left side: Framed Image */}
+            {/* Left side: Framed Media (Fixed, always centered vertically) */}
             <div
               style={{
-                flex: "1 1 420px",
+                flex: isMobile ? "0 0 auto" : "1 1 420px",
                 background: "#1c1510",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                minHeight: 320,
-                padding: 28,
+                padding: isMobile ? 16 : 28,
+                alignSelf: "stretch",
+                maxHeight: isMobile ? "40vh" : "none",
+                minHeight: isMobile ? 240 : 320,
               }}
             >
               <div
@@ -1092,7 +1096,7 @@ export function Museum3DPage({ onBack }: Museum3DPageProps) {
                       width: "100%",
                       maxWidth: 350,
                       height: "auto",
-                      maxHeight: "50vh",
+                      maxHeight: isMobile ? "30vh" : "50vh",
                       objectFit: "contain",
                     }}
                   />
@@ -1105,7 +1109,7 @@ export function Museum3DPage({ onBack }: Museum3DPageProps) {
                       width: "100%",
                       maxWidth: 350,
                       height: "auto",
-                      maxHeight: "50vh",
+                      maxHeight: isMobile ? "30vh" : "50vh",
                       objectFit: "contain",
                       filter: "sepia(0.08) contrast(1.06)",
                     }}
@@ -1114,13 +1118,15 @@ export function Museum3DPage({ onBack }: Museum3DPageProps) {
               </div>
             </div>
 
-            {/* Right side: details */}
+            {/* Right side: details (Scrollable description) */}
             <div
               style={{
                 flex: "1 1 350px",
-                padding: "32px 28px",
+                padding: isMobile ? "24px 20px" : "32px 28px",
                 display: "flex",
                 flexDirection: "column",
+                overflowY: "auto",
+                maxHeight: isMobile ? "45vh" : "85vh",
               }}
             >
               <div style={{ display: "flex", alignItems: "center", gap: 12, borderBottom: `2.5px solid ${C.red}`, paddingBottom: 12, marginBottom: 18 }}>
