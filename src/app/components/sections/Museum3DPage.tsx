@@ -334,7 +334,7 @@ export function Museum3DPage({ onBack }: Museum3DPageProps) {
         part: "Phần I · Trưng bày phía trong",
         type: "video" as const,
         url: "/assets/BaoTang3D/video/lv_0_20260820195008.mp4",
-        details: "Đoạn phim tư liệu lịch sử vô giá ghi lại ngày biểu dương lực lượng lớn nhất thời kỳ Dân chủ Đông Dương - cuộc mít tinh kỷ niệm ngày Quốc tế Lao động 1/5/1938 tại khu Đấu Xảo (Hà Nội). Hơn 2.5 vạn quần chúng từ các tầng lớp công nhân, nông dân, trí thức và dân nghèo thành thị đã diễu hành trật tự, hô vang các khẩu hiệu đòi tự do hội họp, tự do lập hội, cải thiện đời sống, chống phát xít Nhật - Đức và ủng hộ hòa bình. Thước phim ghi lại khí thế cách mạng dâng cao, khẳng định sức mạnh liên minh công nông và uy tín của Đảng.",
+        details: "1. Bối cảnh lịch sử:\n✦ Bối cảnh quốc tế: Lực lượng cánh tả ở Pháp (Đảng Cộng sản, Đảng Xã hội...) giành thắng lợi trong bầu cử Quốc hội, thành lập Chính phủ Mặt trận Nhân dân. Chính phủ tiến bộ này chủ trương nới rộng quyền tự do dân chủ cho các nước thuộc địa, trong đó có Đông Dương và Việt Nam.\n✦ Bối cảnh trong nước: Sau các đợt bắt bớ và khủng bố trắng tàn bạo của thực dân Pháp, tình hình cách mạng gặp muôn vàn khó khăn, số lượng đảng viên bị suy giảm nghiêm trọng.\n\n2. Các hoạt động đấu tranh tiêu biểu:\nTận dụng thời cơ chính sách cai trị nới lỏng, Đảng Cộng sản Đông Dương đã lãnh đạo phát động phong trào đấu tranh dân chủ sục sôi:\n✦ Vận động quần chúng tham gia các cuộc mít tinh, biểu tình công khai đòi dân sinh, dân chủ.\n✦ Xuất bản hệ thống báo chí cách mạng rộng khắp, đưa đại diện của Đảng tham gia ứng cử vào các hội đồng dân biểu và mở rộng đấu tranh trên mặt trận văn học nghệ thuật.\n✦ Đặc biệt, khi Chính phủ Pháp cử phái đoàn Godart sang Đông Dương điều tra, Đảng đã phát động phong trào thu thập và đưa bản 'Dân nguyện' trên phạm vi cả nước (từ Nam Kỳ lên tận Cao Bằng) để tập hợp lực lượng quần chúng làm quen với đấu tranh chính trị đòi quyền lợi hợp pháp.\n\n3. Kết quả và Ý nghĩa lịch sử:\n✦ Buộc thực dân Pháp phải nhượng bộ một số quyền lợi cụ thể trước mắt về dân sinh, dân chủ cho nhân dân lao động.\n✦ Giúp quần chúng nhân dân được giác ngộ lý luận chính trị sâu sắc, kết nối chặt chẽ trong Mặt trận Dân tộc thống nhất.\n✦ Đảng Cộng sản Đông Dương tích lũy được nhiều bài học kinh nghiệm quý báu về xây dựng mặt trận, tổ chức đấu tranh công khai hợp pháp và rèn luyện đội ngũ cán bộ cách mạng.\n✦ Đây là cuộc tập dượt vĩ đại, chuẩn bị trực tiếp cho thắng lợi của Tổng khởi nghĩa tháng Tám năm 1945.",
         year: "1/5/1938",
         author: "Phim tư liệu lịch sử"
       }
@@ -1157,6 +1157,7 @@ export function Museum3DPage({ onBack }: Museum3DPageProps) {
                   lineHeight: 1.75,
                   margin: 0,
                   textAlign: "justify",
+                  whiteSpace: "pre-line",
                 }}
               >
                 {focusedExhibit.details}
