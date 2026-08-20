@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import { ArrowLeft, Play, Pause, SkipForward } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { C } from "@/tokens";
+import galleryGlbUrl from "@/assets/BaoTang3D/art_gallery.glb.glb?url";
+import { imgS2MatTranDanChu, imgS1BoiCanhQuocTe, imgS2DaiHoi1, imgS1PhatXit, imgS1DoiSongNhanDan, imgS3MatTranPhap, imgS3MitTinh, imgS3BaoChi, imgS4PhongTraoDanChu, imgS2HoiNghiThuongHai, imgS3NghiTruong, imgS4ChienTranh, imgS4RenLuyenCanbo, imgS1PhongTraoCachMang, imgCover1936 } from "@/assets/images";
 
 interface Museum3DPageProps {
   onBack: () => void;
@@ -15,85 +17,84 @@ interface Artwork {
   author?: string;
   position: string;
   rotation: string;
-  // camera viewing position for auto-tour (slightly in front of painting)
-  viewFrom?: string;
+
 }
 
 // Positions derived from GLB spotlight data — circular gallery, radius 7.1
 // viewFrom = position 4 units in front of each painting (toward center)
 const ARTWORKS: Artwork[] = [
   {
-    id: "a01", src: "/src/assets/s2-mattran-danchu.jpg",
+    id: "a01", src: imgS2MatTranDanChu,
     year: "1/5/1938",
     caption: "Mít tinh 1/5/1938 tại khu Đấu Xảo — Hà Nội",
     description: "Đỉnh cao của phong trào Mặt trận Dân chủ Đông Dương. Cuộc mít tinh hợp pháp khổng lồ của hơn 2.5 vạn quần chúng biểu dương lực lượng đòi tự do, cơm áo, hòa bình.",
-    position: "-7.1 2.0 0.0", rotation: "0 -90 0", viewFrom: "-3.5 1.65 0.0",
+    position: "-7.1 2.0 0.0", rotation: "0 -90 0",
   },
   {
-    id: "a02", src: "/src/assets/s1-boicanh-quocte.jpg",
+    id: "a02", src: imgS1BoiCanhQuocTe,
     year: "7/1935",
     caption: "Đại hội VII Quốc tế Cộng sản tại Mát-xcơ-va",
     description: "Đại hội xác định chủ nghĩa phát xít là kẻ thù nguy hiểm trước mắt. Chủ trương lập Mặt trận Nhân dân rộng rãi đấu tranh giành hòa bình, tự do và dân chủ.",
     position: "-6.858 2.0 1.838", rotation: "0 -75 0",
   },
   {
-    id: "a03", src: "/src/assets/s2-daihoi-1.jpg",
+    id: "a03", src: imgS2DaiHoi1,
     year: "3/1935",
     caption: "Đại hội đại biểu lần thứ I của Đảng tại Ma Cao",
     description: "Đánh dấu bước khôi phục quan trọng của tổ chức Đảng sau thời kỳ bị thực dân Pháp khủng bố trắng ác liệt theo sau phong trào Xô Viết Nghệ Tĩnh (1930-1931).",
     position: "-6.149 2.0 3.551", rotation: "0 -60 0",
   },
   {
-    id: "a04", src: "/src/assets/s1-phatxit.jpg",
+    id: "a04", src: imgS1PhatXit,
     year: "1933–1939",
     caption: "Chủ nghĩa phát xít — Mối đe dọa toàn cầu",
     description: "Sự trỗi dậy của chủ nghĩa phát xít tại Đức, Ý, Nhật Bản đặt ra thách thức sống còn, thúc đẩy các phong trào dân chủ toàn thế giới đoàn kết chống lại.",
     position: "-5.02 2.0 5.02", rotation: "0 -45 0",
   },
   {
-    id: "a05", src: "/src/assets/s1-doisong-nhandan.jpg",
+    id: "a05", src: imgS1DoiSongNhanDan,
     year: "1929–1933",
     caption: "Đời sống nhân dân dưới ách áp bức thực dân phong kiến",
     description: "Cảnh nông dân, thợ thuyền bần cùng hóa trước khủng hoảng kinh tế toàn cầu và chế độ thuế khóa bóc lột khắc nghiệt, là động lực bùng nổ cao trào đấu tranh.",
     position: "-3.549 2.0 6.149", rotation: "0 -30 0",
   },
   {
-    id: "a06", src: "/src/assets/s3-mattran-phap.jpg",
+    id: "a06", src: imgS3MatTranPhap,
     year: "1936",
     caption: "Chính phủ Mặt trận Nhân dân Pháp lên nắm quyền",
     description: "Sự kiện mở ra không gian pháp lý mới cho Đông Dương: đại xá tù chính trị, nới lỏng kiểm duyệt báo chí và ban hành các cải cách tự do lập hội.",
     position: "-1.838 2.0 6.858", rotation: "0 -15 0",
   },
   {
-    id: "a07", src: "/src/assets/s3-mittinh.jpg",
+    id: "a07", src: imgS3MitTinh,
     year: "1900–1943",
     caption: "Nhà báo — nhà yêu nước lỗi lạc Nguyễn An Ninh",
     description: "Linh hồn của phong trào Đông Dương Đại hội tại Nam Kỳ. Ông dùng diễn thuyết và ngòi bút cổ vũ hàng vạn quần chúng đấu tranh đòi quyền tự do ngôn luận.",
     position: "0.0 2.0 7.1", rotation: "0 0 0",
   },
   {
-    id: "a08", src: "/src/assets/s3-baochi.jpg",
+    id: "a08", src: imgS3BaoChi,
     year: "1936–1939",
     caption: "Mặt trận báo chí cách mạng công khai",
     description: "Hàng chục tờ báo chữ Quốc ngữ và tiếng Pháp như Dân Chúng, Tin Tức, Lao Động thức tỉnh ý thức giác ngộ chính trị của hàng triệu người lao động Đông Dương.",
     position: "1.838 2.0 6.858", rotation: "0 15 0",
   },
   {
-    id: "a09", src: "/src/assets/s4-phongtrao-danchu.jpg",
+    id: "a09", src: imgS4PhongTraoDanChu,
     year: "1936–1937",
     caption: "Phong trào Đông Dương Đại hội — Thu thập Dân nguyện",
     description: "Tập hợp hàng vạn bản kiến nghị gửi đến phái đoàn chính phủ Pháp đòi cải thiện đời sống, giảm sưu thuế và quyền tự do lập hội, tự do báo chí.",
     position: "3.549 2.0 6.149", rotation: "0 30 0",
   },
   {
-    id: "a10", src: "/src/assets/s2-hoinghi-thuonghai.jpg",
+    id: "a10", src: imgS2HoiNghiThuongHai,
     year: "7/1936",
     caption: "Hội nghị BCH Trung ương tại Thượng Hải",
     description: "Quyết định lịch sử: tạm gác khẩu hiệu tịch thu ruộng đất, tập trung lập Mặt trận Nhân dân phản đế đòi quyền dân sinh, dân chủ.",
     position: "5.02 2.0 5.02", rotation: "0 45 0",
   },
   {
-    id: "a11", src: "/src/assets/s3-nghitruong.jpg",
+    id: "a11", src: imgS3NghiTruong,
     year: "1938",
     author: "Trường Chinh & Võ Nguyên Giáp",
     caption: "Tác phẩm 'Vấn đề dân cày' (1938)",
@@ -101,28 +102,28 @@ const ARTWORKS: Artwork[] = [
     position: "6.149 2.0 3.549", rotation: "0 60 0",
   },
   {
-    id: "a12", src: "/src/assets/s4-chientranh.jpg",
+    id: "a12", src: imgS4ChienTranh,
     year: "9/1939",
     caption: "Chiến tranh thế giới thứ hai — Kết thúc thời kỳ Dân chủ",
     description: "Tháng 9/1939, Chiến tranh thế giới thứ hai bùng nổ. Pháp thực hiện chính sách thời chiến, đàn áp phong trào dân chủ, buộc Đảng chuyển hướng chiến lược.",
     position: "6.858 2.0 1.838", rotation: "0 75 0",
   },
   {
-    id: "a13", src: "/src/assets/s4-renluyen-canbo.jpg",
+    id: "a13", src: imgS4RenLuyenCanbo,
     year: "1936–1939",
     caption: "Công tác huấn luyện, rèn luyện cán bộ cách mạng",
     description: "Đảng đặc biệt chú trọng đào tạo đội ngũ cán bộ, xây dựng lực lượng nòng cốt để chuẩn bị cho giai đoạn cách mạng tiếp theo.",
     position: "7.1 2.0 0.0", rotation: "0 90 0",
   },
   {
-    id: "a14", src: "/src/assets/s1-phongtrao-cachmang.jpg",
+    id: "a14", src: imgS1PhongTraoCachMang,
     year: "1930–1935",
     caption: "Phong trào cách mạng Việt Nam trước giai đoạn Dân chủ",
     description: "Bức tranh toàn cảnh giai đoạn 1930-1935: từ đỉnh cao Xô Viết Nghệ Tĩnh đến thời kỳ khôi phục, tạo tiền đề cho cao trào dân chủ 1936-1939.",
     position: "6.858 2.0 -1.838", rotation: "0 105 0",
   },
   {
-    id: "a15", src: "/src/assets/cover-1936.jpg",
+    id: "a15", src: imgCover1936,
     year: "1936",
     caption: "Dấu mốc 1936 — Mặt trận Dân chủ Đông Dương ra đời",
     description: "Năm 1936 đánh dấu bước chuyển biến mạnh mẽ: Đảng chuyển từ đấu tranh bí mật sang kết hợp linh hoạt đấu tranh công khai, hợp pháp với nửa hợp pháp.",
@@ -138,34 +139,7 @@ export function Museum3DPage({ onBack }: Museum3DPageProps) {
   const [hoveredArt, setHoveredArt] = useState<Artwork | null>(null);
   const [loadState, setLoadState] = useState<"init" | "loading" | "done">("init");
   const [loadPct, setLoadPct] = useState(0);
-  const [tourActive, setTourActive] = useState(false);
-  const [tourIdx, setTourIdx] = useState(0);
   const initDone = useRef(false);
-  const tourTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  // Teleport camera to view a painting from in front
-  const teleportTo = (art: Artwork) => {
-    const rig = document.getElementById("rig") as any;
-    if (!rig) return;
-    // Compute in-front position: move 3.5 units from wall toward center
-    const [px, py, pz] = art.position.split(" ").map(Number);
-    // Direction from painting toward center (0,0,0)
-    const dx = -px, dz = -pz;
-    const len = Math.sqrt(dx * dx + dz * dz) || 1;
-    const nx = (dx / len) * 3.5;
-    const nz = (dz / len) * 3.5;
-    rig.setAttribute("position", { x: px + nx, y: 0, z: pz + nz });
-    // Look toward the painting
-    const cam = rig.querySelector("a-camera") as any;
-    if (cam) {
-      const lookControls = cam.components["look-controls"];
-      if (lookControls) {
-        const yawDeg = Math.atan2(px - (px + nx), pz - (pz + nz)) * 180 / Math.PI;
-        lookControls.yawObject.rotation.y = yawDeg * Math.PI / 180;
-        lookControls.pitchObject.rotation.x = 0;
-      }
-    }
-  };
 
   /* ── 1. Load A-Frame + register component ───────────────────────────── */
   useEffect(() => {
@@ -242,7 +216,7 @@ export function Museum3DPage({ onBack }: Museum3DPageProps) {
           vr-mode-ui="enabled:false"
         >
           <a-assets timeout="300000">
-            <a-asset-item id="gallery-glb" src="/src/assets/BaoTang3D/art_gallery.glb.glb"></a-asset-item>
+            <a-asset-item id="gallery-glb" src="${galleryGlbUrl}"></a-asset-item>
             ${imgAssets}
           </a-assets>
 
@@ -338,33 +312,7 @@ export function Museum3DPage({ onBack }: Museum3DPageProps) {
     };
   }, []);
 
-  /* ── 3. Auto-tour logic ─────────────────────────────────────────────── */
-  useEffect(() => {
-    if (!tourActive || loadState !== "done") return;
-    // Teleport to current artwork and show its modal after a short delay
-    const art = ARTWORKS[tourIdx];
-    teleportTo(art);
-    const t1 = setTimeout(() => setSelectedArt(art), 800);
-    // Advance to next after 8 seconds
-    tourTimer.current = setTimeout(() => {
-      setSelectedArt(null);
-      setTourIdx(i => (i + 1) % ARTWORKS.length);
-    }, 8000);
-    return () => { clearTimeout(t1); if (tourTimer.current) clearTimeout(tourTimer.current); };
-  }, [tourActive, tourIdx, loadState]);
 
-  /* ── 4. Keyboard shortcut T = toggle tour ───────────────────────────── */
-  useEffect(() => {
-    if (loadState !== "done") return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key.toLowerCase() === "t") {
-        setTourActive(v => !v);
-        if (!tourActive) { setTourIdx(0); setSelectedArt(null); }
-      }
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [loadState, tourActive]);
 
   /* ── Render ─────────────────────────────────────────────────────────── */
   const isLoading = loadState !== "done";
@@ -519,70 +467,8 @@ export function Museum3DPage({ onBack }: Museum3DPageProps) {
         </div>
       </div>
 
-      {/* ── Auto-tour demo control bar ── */}
-      {!isLoading && !hoveredArt && !selectedArt && (
-        <div style={{
-          position: "absolute", bottom: 24, left: "50%", transform: "translateX(-50%)",
-          zIndex: 200, pointerEvents: "all",
-          display: "flex", alignItems: "center", gap: 10,
-          background: "rgba(10,6,2,0.82)", border: `1px solid rgba(201,164,92,0.3)`,
-          padding: "8px 16px", backdropFilter: "blur(8px)",
-        }}>
-          {/* Play/pause auto-tour */}
-          <button
-            onClick={() => { setTourActive(v => !v); if (!tourActive) { setTourIdx(0); setSelectedArt(null); } }}
-            style={{
-              display: "flex", alignItems: "center", gap: 7,
-              background: tourActive ? C.red : "rgba(201,164,92,0.12)",
-              border: `1px solid ${tourActive ? C.red : "rgba(201,164,92,0.35)"}`,
-              color: tourActive ? "#fff" : C.accent,
-              fontFamily: C.sans, fontSize: 10, fontWeight: 700,
-              letterSpacing: "0.1em", textTransform: "uppercase",
-              padding: "7px 14px", cursor: "pointer", transition: C.tr,
-            }}
-          >
-            {tourActive ? <><Pause size={12}/> Dừng Auto Tour</> : <><Play size={12}/> Auto Tour Demo</>}
-          </button>
-
-          {tourActive && (
-            <>
-              {/* Skip to next painting */}
-              <button
-                onClick={() => { if (tourTimer.current) clearTimeout(tourTimer.current); setSelectedArt(null); setTourIdx(i => (i + 1) % ARTWORKS.length); }}
-                style={{
-                  display: "flex", alignItems: "center", gap: 6,
-                  background: "rgba(201,164,92,0.08)", border: `1px solid rgba(201,164,92,0.3)`,
-                  color: "rgba(201,164,92,0.7)", fontFamily: C.sans, fontSize: 10,
-                  fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase",
-                  padding: "7px 12px", cursor: "pointer", transition: C.tr,
-                }}
-                onMouseEnter={e => e.currentTarget.style.color = C.accent}
-                onMouseLeave={e => e.currentTarget.style.color = "rgba(201,164,92,0.7)"}
-              >
-                <SkipForward size={12}/> Tiếp
-              </button>
-
-              {/* Progress indicator */}
-              <span style={{
-                fontFamily: C.sans, fontSize: 10, color: "rgba(201,164,92,0.5)",
-                letterSpacing: "0.06em", padding: "0 4px",
-              }}>
-                {tourIdx + 1} / {ARTWORKS.length}
-              </span>
-            </>
-          )}
-
-          <span style={{
-            fontFamily: C.sans, fontSize: 10, color: "rgba(201,164,92,0.3)",
-            letterSpacing: "0.06em", borderLeft: "1px solid rgba(201,164,92,0.15)", paddingLeft: 10, marginLeft: 4,
-          }}>
-            T = bật/tắt
-          </span>
-        </div>
-      )}
-
-      {/* ── Hover tooltip (only when not in tour) ── */}
-      {hoveredArt && !selectedArt && !isLoading && !tourActive && (
+      {/* ── Hover tooltip ── */}
+      {hoveredArt && !selectedArt && !isLoading && (
         <div style={{
           position: "absolute", bottom: 32, left: "50%", transform: "translateX(-50%)",
           zIndex: 200, pointerEvents: "none", textAlign: "center",
