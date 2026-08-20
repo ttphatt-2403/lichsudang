@@ -180,12 +180,7 @@ export function Museum3DPage({ onBack }: Museum3DPageProps) {
       setLoadState("loading");
       setLoadPct(5);
 
-      // All images in a-assets for simultaneous preloading
-      const imgAssets = ARTWORKS.map(a =>
-        `<img id="${a.id}" src="${a.src}" />`
-      ).join("\n          ");
-
-      // Painting panels — use asset references (#id) since all images are in a-assets
+      // Painting panels — load images directly onto the planes
       const panels = ARTWORKS.map(a => `
         <a-entity position="${a.position}" rotation="${a.rotation}">
           <a-plane width="${(PW + 0.16).toFixed(2)}" height="${(PH + 0.16).toFixed(2)}"
@@ -194,7 +189,7 @@ export function Museum3DPage({ onBack }: Museum3DPageProps) {
           <a-plane width="${(PW + 0.07).toFixed(2)}" height="${(PH + 0.07).toFixed(2)}"
             color="#f5ead0" position="0 0 -0.009"></a-plane>
           <a-plane width="${PW}" height="${PH}"
-            src="#${a.id}"
+            src="${a.src}"
             material="side:front;shader:flat"
             class="clickable"
             museum-art="id:${a.id}"></a-plane>
@@ -217,7 +212,6 @@ export function Museum3DPage({ onBack }: Museum3DPageProps) {
         >
           <a-assets timeout="300000">
             <a-asset-item id="gallery-glb" src="${galleryGlbUrl}"></a-asset-item>
-            ${imgAssets}
           </a-assets>
 
           <!-- Gallery environment model -->
