@@ -322,12 +322,12 @@ export function Museum3DPage({ onBack }: Museum3DPageProps) {
     // 2 new user uploaded video files (one was deleted by the user)
     const videoData = [
       {
-        title: "Phim tư liệu: Sự ra đời của Mặt trận Dân chủ Đông Dương (1936)",
+        title: "Phim tư liệu: Bối cảnh & Chủ trương chuyển hướng chỉ đạo chiến lược (1936)",
         part: "Phần I · Trưng bày phía trong",
         type: "video" as const,
         url: "/assets/BaoTang3D/video/lv_0_20260820194258.mp4",
-        details: "Đoạn phim tư liệu phác họa chân thực bối cảnh lịch sử đầy biến động giữa những năm 1930. Sự trỗi dậy của chủ nghĩa phát xít đe dọa nền hòa bình toàn cầu cùng sự lên ngôi của Chính phủ Mặt trận Nhân dân Pháp đã tạo cơ hội cho cách mạng Việt Nam. Dưới sự chỉ đạo nhạy bén của Đảng Cộng sản Đông Dương, Mặt trận Nhân dân phản đế (sau đổi thành Mặt trận Dân chủ Đông Dương) đã chính thức ra đời. Đoạn phim giới thiệu tiến trình Đảng chuyển hướng chỉ đạo chiến lược: tạm gác khẩu hiệu phản đế và tịch thu ruộng đất, chuyển sang đấu tranh công khai nửa hợp pháp đòi tự do, cơm áo, hòa bình.",
-        year: "1936",
+        details: "1. Bối cảnh lịch sử và quốc tế:\n✦ Khủng hoảng kinh tế thế giới (1929–1933) làm sâu sắc thêm mâu thuẫn xã hội, thúc đẩy các thế lực cực đoan thiết lập chế độ độc tài phát xít Đức, Ý, Nhật đe dọa hòa bình thế giới.\n✦ Đại hội Quốc tế Cộng sản lần thứ VII (7/1935) xác định kẻ thù là chủ nghĩa phát xít, đặt nhiệm vụ chống phát xít, đòi tự do dân chủ và thành lập Mặt trận rộng rãi.\n✦ Mặt trận Nhân dân Pháp lên nắm quyền (6/1936) đã ban hành một số chính sách tiến bộ nới rộng quyền tự do ở thuộc địa. Nhân dân Đông Dương hăng hái đấu tranh đòi cải thiện dân sinh, dân chủ.\n\n2. Hội nghị Ban Chấp hành Trung ương Đảng (7/1936):\nĐồng chí Lê Hồng Phong chủ trì Hội nghị BCH Trung ương họp tại Thượng Hải (Trung Quốc), đưa ra chỉ đạo:\n✦ Nhiệm vụ chiến lược cách mạng: Chống đế quốc và chống phong kiến.\n✦ Nhiệm vụ trực tiếp trước mắt: Chống chế độ phản động thuộc địa, chống phát xít, chống chiến tranh; đòi tự do, dân sinh, dân chủ, cơm áo và hòa bình.\n✦ Phương thức hoạt động: Kết hợp linh hoạt đấu tranh công khai và bí mật, hợp pháp và nửa hợp pháp.\n✦ Thành lập Mặt trận thống nhất nhân dân phản đế Đông Dương.\n\n3. Các hoạt động đấu tranh tiêu biểu:\n✦ Phong trào Đông Dương đại hội (8/1936) vận động nhân dân thảo bản dân nguyện gửi Quốc hội Pháp.\n✦ Tổ chức các cuộc đón rước phái viên Godart (1937) rầm rộ biểu dương lực lượng quần chúng.\n✦ Tổ chức ngày biểu dương lực lượng Quốc tế Lao động công khai quy mô lớn (1/5/1938).\n\n4. Kết quả và Ý nghĩa lịch sử:\n✦ Buộc chính quyền thực dân phải nhượng bộ một số yêu sách dân sinh, dân chủ.\n✦ Quần chúng được giác ngộ chính trị mạnh mẽ, tạo nên lực lượng hùng hậu chuẩn bị trực tiếp cho Tổng khởi nghĩa giành độc lập sau này.",
+        year: "7/1936",
         author: "Phim tư liệu lịch sử"
       },
       {
