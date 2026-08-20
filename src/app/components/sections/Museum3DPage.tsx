@@ -182,7 +182,7 @@ export function Museum3DPage({ onBack }: Museum3DPageProps) {
 
       // All images in a-assets for simultaneous preloading
       const imgAssets = ARTWORKS.map(a =>
-        `<img id="${a.id}" src="${a.src}" crossorigin="anonymous"/>`
+        `<img id="${a.id}" src="${a.src}" />`
       ).join("\n          ");
 
       // Painting panels — use asset references (#id) since all images are in a-assets
