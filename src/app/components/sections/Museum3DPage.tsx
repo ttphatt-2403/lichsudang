@@ -316,7 +316,7 @@ export function Museum3DPage({ onBack }: Museum3DPageProps) {
     const exhibits: Exhibit[] = [];
     const activeVideos: HTMLVideoElement[] = [];
 
-    // 3 new user uploaded video files
+    // 2 new user uploaded video files (one was deleted by the user)
     const videoData = [
       {
         title: "Phim tư liệu: Sự ra đời của Mặt trận Dân chủ Đông Dương (1936)",
@@ -325,15 +325,6 @@ export function Museum3DPage({ onBack }: Museum3DPageProps) {
         url: "/assets/BaoTang3D/video/lv_0_20260820194258.mp4",
         details: "Đoạn phim tư liệu phác họa chân thực bối cảnh lịch sử đầy biến động giữa những năm 1930. Sự trỗi dậy của chủ nghĩa phát xít đe dọa nền hòa bình toàn cầu cùng sự lên ngôi của Chính phủ Mặt trận Nhân dân Pháp đã tạo cơ hội cho cách mạng Việt Nam. Dưới sự chỉ đạo nhạy bén của Đảng Cộng sản Đông Dương, Mặt trận Nhân dân phản đế (sau đổi thành Mặt trận Dân chủ Đông Dương) đã chính thức ra đời. Đoạn phim giới thiệu tiến trình Đảng chuyển hướng chỉ đạo chiến lược: tạm gác khẩu hiệu phản đế và tịch thu ruộng đất, chuyển sang đấu tranh công khai nửa hợp pháp đòi tự do, cơm áo, hòa bình.",
         year: "1936",
-        author: "Phim tư liệu lịch sử"
-      },
-      {
-        title: "Phim tư liệu: Phong trào Đông Dương Đại hội & Thu thập Dân nguyện",
-        part: "Phần I · Trưng bày phía trong",
-        type: "video" as const,
-        url: "/assets/BaoTang3D/video/lv_0_20260820194638.mp4",
-        details: "Thước phim thời sự phản ánh chân thực không khí đấu tranh sục sôi của nhân dân Việt Nam trong phong trào Đông Dương Đại hội (1936-1937). Khắp nơi từ nhà máy, hầm mỏ đến nông thôn hẻo lánh, các Ủy ban hành động được thành lập công khai để thảo luận yêu sách và thu thập chữ ký quần chúng gửi đến phái đoàn điều tra của Chính phủ Pháp. Thước phim ghi lại khí thế của công nhân bãi công, nông dân mít tinh đòi quyền dân sinh, dân chủ. Đây là cuộc vận động chính trị công khai sâu rộng nhất, thức tỉnh mạnh mẽ tinh thần đấu tranh cách mạng của quần chúng.",
-        year: "1936-1937",
         author: "Phim tư liệu lịch sử"
       },
       {
@@ -347,10 +338,10 @@ export function Museum3DPage({ onBack }: Museum3DPageProps) {
       }
     ];
 
-    // Group our 15 paintings and 3 videos into inside slots
+    // Group our 15 paintings and 2 videos into inside slots
     const insideExhibitsData = [
       ...videoData,
-      ...ARTWORKS.slice(0, 5).map(a => ({
+      ...ARTWORKS.slice(0, 6).map(a => ({
         title: a.caption,
         part: "Phần I · Trưng bày phía trong",
         type: "image" as const,
@@ -361,7 +352,7 @@ export function Museum3DPage({ onBack }: Museum3DPageProps) {
       }))
     ];
 
-    const inside001ExhibitsData = ARTWORKS.slice(5, 15).map(a => ({
+    const inside001ExhibitsData = ARTWORKS.slice(6, 15).map(a => ({
       title: a.caption,
       part: "Phần I · Trưng bày phía trong",
       type: "image" as const,
