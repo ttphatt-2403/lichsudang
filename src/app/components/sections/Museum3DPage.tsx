@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { ArrowLeft } from "lucide-react";
 import { C } from "@/tokens";
-import galleryGlbUrl from "@/assets/BaoTang3D/art_gallery.glb.glb?url";
+const galleryGlbUrl = "/assets/BaoTang3D/art_gallery.glb.glb";
 import { imgS2MatTranDanChu, imgS1BoiCanhQuocTe, imgS2DaiHoi1, imgS1PhatXit, imgS1DoiSongNhanDan, imgS3MatTranPhap, imgS3MitTinh, imgS3BaoChi, imgS4PhongTraoDanChu, imgS2HoiNghiThuongHai, imgS3NghiTruong, imgS4ChienTranh, imgS4RenLuyenCanbo, imgS1PhongTraoCachMang, imgCover1936 } from "@/assets/images";
 
 interface Museum3DPageProps {
