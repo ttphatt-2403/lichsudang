@@ -19,6 +19,8 @@ import {
   imgS4RenLuyenCanbo,
   imgS1PhongTraoCachMang,
   imgCover1936,
+  imgCover1937,
+  imgCover1939,
 } from "@/assets/images";
 
 const galleryGlbUrl = "/assets/BaoTang3D/art_gallery.glb.glb";
@@ -372,25 +374,28 @@ export function Museum3DPage({ onBack }: Museum3DPageProps) {
         details: "Phong trào Đông Dương Đại hội bùng nổ mạnh mẽ trong suốt năm 1936, mở đầu cho cao trào dân chủ lớn chưa từng có. Dưới sự lãnh đạo sáng suốt của Đảng Cộng sản Đông Dương, hàng nghìn Ủy ban hành động đã được thành lập công khai tại các nhà máy, hầm mỏ, thôn xóm để thu thập nguyện vọng của quần chúng nhân dân. Các bản 'Dân nguyện' tập trung đòi tự do lập hội, tự do báo chí, tự do hội họp, cải thiện đời sống công nhân và chia lại ruộng đất cho dân cày nghèo. Phong trào đã thức tỉnh tinh thần chính trị của đông đảo quần chúng, tạo tiền đề xây dựng lực lượng cách mạng to lớn sau này."
       },
       {
-        title: "Ảnh bìa tư liệu Mặt trận Dân chủ Đông Dương (1936)",
+        title: "Đại hội VII Quốc tế Cộng sản, tháng 7/1935",
         part: "Phần II · Trưng bày vòm ngoài",
+        type: "image" as const,
         url: imgCover1936,
-        year: "1936",
-        details: "Trước sự xuất hiện của chủ nghĩa phát xít nguy hiểm và sự chỉ đạo của Quốc tế Cộng sản, Đảng Cộng sản Đông Dương đã nhanh chóng họp hội nghị Ban Chấp hành Trung ương (7/1936) quyết định tạm thời gác khẩu hiệu tịch thu ruộng đất của địa chủ và đánh đổ đế quốc Pháp. Đảng chủ trương thành lập Mặt trận Nhân dân phản đế (sau đổi thành Mặt trận Dân chủ Đông Dương) nhằm đoàn kết rộng rãi mọi giai cấp, tầng lớp xã hội, đảng phái và ngoại kiều tiến bộ để cùng đấu tranh đòi các quyền dân sinh, dân chủ, tự do, hòa bình."
+        year: "7/1935",
+        details: "Đại hội lần thứ VII của Quốc tế Cộng sản họp tại Mát-xcơ-va vào tháng 7/1935 xác định kẻ thù nguy hiểm trước mắt là chủ nghĩa phát xít. Đại hội chủ trương thành lập Mặt trận Nhân dân rộng rãi để đấu tranh giành tự do, hòa bình và dân chủ. Quyết sách này là cơ sở lý luận quan trọng giúp Đảng Cộng sản Đông Dương nhanh chóng chuyển hướng chỉ đạo chiến lược, thành lập Mặt trận Dân chủ chống thực dân phản động Pháp."
       },
       {
-        title: "Báo chí tiếng Pháp đấu tranh công khai (1936-1939)",
+        title: "Báo Tin tức, Dân chúng, hoặc các ấn phẩm công khai (1936-1939)",
         part: "Phần II · Trưng bày vòm ngoài",
+        type: "image" as const,
         url: imgS3BaoChi,
-        year: "1936–1939",
-        details: "Trong những năm tháng đấu tranh công khai nửa hợp pháp, Đảng đặc biệt chú trọng xuất bản các tờ báo bằng tiếng Pháp như Le Travail (Lao động), Rassemblement (Tập hợp), Notre Voix (Tiếng nói của chúng ta)... Nhắm trực tiếp vào chính giới Pháp và tầng lớp trí thức tiến bộ tại Đông Dương. Các tờ báo này đã vạch trần các chính sách bóc lột, tù đày của chính quyền thực dân, tuyên truyền sâu rộng chủ nghĩa Mác - Lênin và định hướng đấu tranh cho quần chúng nhân dân một cách sắc bén."
+        year: "1936-1939",
+        details: "Hệ thống báo chí cách mạng chữ Quốc ngữ như tờ Dân Chúng, Tin Tức, Đời Mới, Lao Động... phát triển vô cùng rực rỡ và có sức lan tỏa mạnh mẽ thời bấy giờ. Báo chí đã trở thành công cụ tổ chức tập thể đắc lực nhất, phản ánh nguyện vọng dân sinh của nhân dân lao động và vạch trần các chính sách bóc lột của chính quyền thuộc địa Pháp."
       },
       {
-        title: "Báo chí chữ Quốc ngữ đấu tranh công khai (1936-1939)",
+        title: "Ảnh bìa tư liệu Mặt trận Dân chủ Đông Dương (1939)",
         part: "Phần II · Trưng bày vòm ngoài",
-        url: imgS3BaoChi,
-        year: "1936–1939",
-        details: "Song hành với báo tiếng Pháp, hệ thống báo chí chữ Quốc ngữ của Đảng như Dân Chúng, Tin Tức, Đời Mới, Lao Động... phát triển rực rỡ và có sức lan tỏa vô cùng mạnh mẽ. Tờ 'Dân Chúng' - cơ quan trung ương của Đảng - xuất bản công khai tại Sài Gòn có số lượng phát hành lên tới hàng vạn bản mỗi kỳ. Báo chí cách mạng đã trở thành công cụ tổ chức, giáo dục chính trị đắc lực nhất, giúp kết nối hàng triệu trái tim yêu nước từ nông thôn đến thành thị vào một khối thống nhất đấu tranh đòi quyền sống."
+        type: "image" as const,
+        url: imgCover1939,
+        year: "1939",
+        details: "Ấn phẩm tài liệu lý luận chính trị chính thức giới thiệu mục tiêu hoạt động và cương lĩnh đấu tranh đòi tự do lập hội, tự do báo chí, cơm áo, hòa bình của Mặt trận Dân chủ Đông Dương. Tài liệu đóng vai trò then chốt giúp tập hợp hàng triệu quần chúng cách mạng vào một khối liên minh thống nhất."
       },
       {
         title: "Phong trào vận động dân chủ 1936 – 1939 tại Huế",
