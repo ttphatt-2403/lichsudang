@@ -1169,7 +1169,29 @@ export function Museum3DPage({ onBack }: Museum3DPageProps) {
                 {focusedExhibit.details}
               </p>
 
-              <div style={{ marginTop: "28px" }}>
+              <div style={{ marginTop: 24, padding: 12, background: "rgba(139, 26, 26, 0.04)", borderLeft: `3px solid ${C.red}` }}>
+                <span style={{ fontFamily: C.sans, fontSize: 11, fontWeight: 800, color: C.red, textTransform: "uppercase", letterSpacing: "0.05em", display: "block", marginBottom: 6 }}>
+                  📚 Nguồn tài liệu tham khảo chính thức:
+                </span>
+                <a
+                  href="https://www.iuv.edu.vn/cms/plugin_upload/preview/news/1468/1113/gt-lich-su-dang-csvn-ban-tuyen-giao-tw.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ fontFamily: C.sans, fontSize: 12, color: C.red, textDecoration: "underline", display: "block", marginBottom: 5, lineHeight: 1.4 }}
+                >
+                  Giáo trình Lịch sử Đảng Cộng sản Việt Nam (Ban Tuyên giáo TW)
+                </a>
+                <a
+                  href="https://tulieuvankien.dangcongsan.vn/ban-chap-hanh-trung-uong-dang/dai-hoi-dang/lan-thu-i/nien-bieu-toan-khoa-27?categoryId=104000029&utm_source=chatgpt.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ fontFamily: C.sans, fontSize: 12, color: C.red, textDecoration: "underline", display: "block", lineHeight: 1.4 }}
+                >
+                  Văn kiện Đảng: Niên biểu toàn khóa Đại hội Đảng lần thứ I (ĐCSVN)
+                </a>
+              </div>
+
+              <div style={{ marginTop: "24px" }}>
                 <button
                   onClick={() => setFocusedExhibit(null)}
                   style={{
