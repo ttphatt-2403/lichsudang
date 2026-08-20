@@ -314,20 +314,57 @@ export function Museum3DPage({ onBack }: Museum3DPageProps) {
     // ── Exhibit Setup from original merged meshes ─────────────────────
     const textureLoader = new THREE.TextureLoader();
     const exhibits: Exhibit[] = [];
+    const activeVideos: HTMLVideoElement[] = [];
 
-    // Group our 15 paintings into inside slots
-    const insideExhibitsData = ARTWORKS.slice(0, 8).map(a => ({
+    // 3 new user uploaded video files
+    const videoData = [
+      {
+        title: "Phim tư liệu: Sự ra đời của Mặt trận Dân chủ Đông Dương (1936)",
+        part: "Phần I · Trưng bày phía trong",
+        type: "video" as const,
+        url: "/assets/BaoTang3D/video/lv_0_20260820194258.mp4",
+        details: "Đoạn phim tư liệu phác họa chân thực bối cảnh lịch sử đầy biến động giữa những năm 1930. Sự trỗi dậy của chủ nghĩa phát xít đe dọa nền hòa bình toàn cầu cùng sự lên ngôi của Chính phủ Mặt trận Nhân dân Pháp đã tạo cơ hội cho cách mạng Việt Nam. Dưới sự chỉ đạo nhạy bén của Đảng Cộng sản Đông Dương, Mặt trận Nhân dân phản đế (sau đổi thành Mặt trận Dân chủ Đông Dương) đã chính thức ra đời. Đoạn phim giới thiệu tiến trình Đảng chuyển hướng chỉ đạo chiến lược: tạm gác khẩu hiệu phản đế và tịch thu ruộng đất, chuyển sang đấu tranh công khai nửa hợp pháp đòi tự do, cơm áo, hòa bình.",
+        year: "1936",
+        author: "Phim tư liệu lịch sử"
+      },
+      {
+        title: "Phim tư liệu: Phong trào Đông Dương Đại hội & Thu thập Dân nguyện",
+        part: "Phần I · Trưng bày phía trong",
+        type: "video" as const,
+        url: "/assets/BaoTang3D/video/lv_0_20260820194638.mp4",
+        details: "Thước phim thời sự phản ánh chân thực không khí đấu tranh sục sôi của nhân dân Việt Nam trong phong trào Đông Dương Đại hội (1936-1937). Khắp nơi từ nhà máy, hầm mỏ đến nông thôn hẻo lánh, các Ủy ban hành động được thành lập công khai để thảo luận yêu sách và thu thập chữ ký quần chúng gửi đến phái đoàn điều tra của Chính phủ Pháp. Thước phim ghi lại khí thế của công nhân bãi công, nông dân mít tinh đòi quyền dân sinh, dân chủ. Đây là cuộc vận động chính trị công khai sâu rộng nhất, thức tỉnh mạnh mẽ tinh thần đấu tranh cách mạng của quần chúng.",
+        year: "1936-1937",
+        author: "Phim tư liệu lịch sử"
+      },
+      {
+        title: "Phim tư liệu: Cuộc đại mít tinh lịch sử 1/5/1938 tại Đấu Xảo",
+        part: "Phần I · Trưng bày phía trong",
+        type: "video" as const,
+        url: "/assets/BaoTang3D/video/lv_0_20260820195008.mp4",
+        details: "Đoạn phim tư liệu lịch sử vô giá ghi lại ngày biểu dương lực lượng lớn nhất thời kỳ Dân chủ Đông Dương - cuộc mít tinh kỷ niệm ngày Quốc tế Lao động 1/5/1938 tại khu Đấu Xảo (Hà Nội). Hơn 2.5 vạn quần chúng từ các tầng lớp công nhân, nông dân, trí thức và dân nghèo thành thị đã diễu hành trật tự, hô vang các khẩu hiệu đòi tự do hội họp, tự do lập hội, cải thiện đời sống, chống phát xít Nhật - Đức và ủng hộ hòa bình. Thước phim ghi lại khí thế cách mạng dâng cao, khẳng định sức mạnh liên minh công nông và uy tín của Đảng.",
+        year: "1/5/1938",
+        author: "Phim tư liệu lịch sử"
+      }
+    ];
+
+    // Group our 15 paintings and 3 videos into inside slots
+    const insideExhibitsData = [
+      ...videoData,
+      ...ARTWORKS.slice(0, 5).map(a => ({
+        title: a.caption,
+        part: "Phần I · Trưng bày phía trong",
+        type: "image" as const,
+        url: a.src,
+        details: a.description,
+        year: a.year,
+        author: a.author
+      }))
+    ];
+
+    const inside001ExhibitsData = ARTWORKS.slice(5, 15).map(a => ({
       title: a.caption,
       part: "Phần I · Trưng bày phía trong",
-      url: a.src,
-      details: a.description,
-      year: a.year,
-      author: a.author
-    }));
-
-    const inside001ExhibitsData = ARTWORKS.slice(8, 15).map(a => ({
-      title: a.caption,
-      part: "Phần I · Trưng bày phía trong",
+      type: "image" as const,
       url: a.src,
       details: a.description,
       year: a.year,
@@ -542,12 +579,34 @@ export function Museum3DPage({ onBack }: Museum3DPageProps) {
 
         // 2. Picture plane
         const canvasGeo = new THREE.PlaneGeometry(fWidth, fHeight);
-        const tex = textureLoader.load(data.url);
-        tex.colorSpace = THREE.SRGBColorSpace;
-        const canvasMat = new THREE.MeshBasicMaterial({
-          map: tex,
-          side: THREE.DoubleSide
-        });
+        let canvasMat: THREE.Material;
+
+        if (data.type === "video") {
+          const video = document.createElement("video");
+          video.src = data.url;
+          video.loop = true;
+          video.muted = true;
+          video.playsInline = true;
+          video.setAttribute("webkit-playsinline", "true");
+          video.play().catch((err) => console.log("Video autoplay blocked:", err));
+          activeVideos.push(video);
+
+          const videoTex = new THREE.VideoTexture(video);
+          videoTex.colorSpace = THREE.SRGBColorSpace;
+
+          canvasMat = new THREE.MeshBasicMaterial({
+            map: videoTex,
+            side: THREE.DoubleSide
+          });
+        } else {
+          const tex = textureLoader.load(data.url);
+          tex.colorSpace = THREE.SRGBColorSpace;
+          canvasMat = new THREE.MeshBasicMaterial({
+            map: tex,
+            side: THREE.DoubleSide
+          });
+        }
+
         const canvasMesh = new THREE.Mesh(canvasGeo, canvasMat);
         canvasMesh.position.z = 0.023; // Offset forward slightly
         group.add(canvasMesh);
@@ -566,6 +625,7 @@ export function Museum3DPage({ onBack }: Museum3DPageProps) {
           id: exhibits.length + 1,
           title: data.title,
           part: data.part,
+          type: data.type,
           url: data.url,
           width: fWidth,
           height: fHeight,
@@ -739,6 +799,13 @@ export function Museum3DPage({ onBack }: Museum3DPageProps) {
       domElement.removeEventListener("touchstart", handleTouchStart);
       domElement.removeEventListener("touchmove", handleTouchMove);
       window.removeEventListener("touchend", handleTouchEnd);
+
+      // Clean up all active HTML5 video elements to prevent sound or memory leaks
+      activeVideos.forEach((v) => {
+        v.pause();
+        v.removeAttribute("src");
+        v.load();
+      });
 
       if (currentMount && renderer.domElement) {
         currentMount.removeChild(renderer.domElement);
@@ -1019,19 +1086,35 @@ export function Museum3DPage({ onBack }: Museum3DPageProps) {
                   boxShadow: "0 8px 36px rgba(0,0,0,0.7), inset 0 0 12px rgba(0,0,0,0.2)",
                 }}
               >
-                <img
-                  src={focusedExhibit.url}
-                  alt={focusedExhibit.title}
-                  style={{
-                    display: "block",
-                    width: "100%",
-                    maxWidth: 350,
-                    height: "auto",
-                    maxHeight: "50vh",
-                    objectFit: "contain",
-                    filter: "sepia(0.08) contrast(1.06)",
-                  }}
-                />
+                {focusedExhibit.type === "video" ? (
+                  <video
+                    src={focusedExhibit.url}
+                    controls
+                    autoPlay
+                    style={{
+                      display: "block",
+                      width: "100%",
+                      maxWidth: 350,
+                      height: "auto",
+                      maxHeight: "50vh",
+                      objectFit: "contain",
+                    }}
+                  />
+                ) : (
+                  <img
+                    src={focusedExhibit.url}
+                    alt={focusedExhibit.title}
+                    style={{
+                      display: "block",
+                      width: "100%",
+                      maxWidth: 350,
+                      height: "auto",
+                      maxHeight: "50vh",
+                      objectFit: "contain",
+                      filter: "sepia(0.08) contrast(1.06)",
+                    }}
+                  />
+                )}
               </div>
             </div>
 
